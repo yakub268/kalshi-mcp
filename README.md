@@ -30,7 +30,13 @@ Built with production-grade authentication and rate limiting from a live trading
 
 2. **Python 3.10+**
 
-### Setup
+### Quick Install (PyPI)
+
+```bash
+pip install kalshi-mcp
+```
+
+### From Source
 
 ```bash
 # Clone repository
@@ -38,11 +44,7 @@ git clone https://github.com/yakub268/kalshi-mcp.git
 cd kalshi-mcp
 
 # Install dependencies
-uv pip install -e .
-
-# Configure credentials
-cp .env.example .env
-# Edit .env with your API key and private key path
+pip install -e .
 ```
 
 ### Claude Desktop Configuration
@@ -56,23 +58,21 @@ Add to your Claude Desktop config file:
 {
   "mcpServers": {
     "kalshi": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "/ABSOLUTE/PATH/TO/kalshi-mcp",
-        "run",
-        "kalshi_mcp.py"
-      ],
+      "command": "python",
+      "args": ["-m", "kalshi_mcp"],
       "env": {
         "KALSHI_API_KEY": "your-api-key-here",
-        "KALSHI_PRIVATE_KEY_PATH": "/path/to/kalshi_private_key.pem"
+        "KALSHI_PRIVATE_KEY_PATH": "C:\\Users\\YourName\\.trading_keys\\kalshi_private_key.pem"
       }
     }
   }
 }
 ```
 
-**Important**: Replace `/ABSOLUTE/PATH/TO/kalshi-mcp` with the actual path where you cloned the repository.
+**Note**:
+- Replace `your-api-key-here` with your actual Kalshi API key
+- Update the private key path to where you saved your `.pem` file
+- On Windows, use double backslashes (`\\`) in paths
 
 ### Test the Connection
 
