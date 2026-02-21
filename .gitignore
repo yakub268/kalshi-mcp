@@ -32,6 +32,10 @@ ENV/
 *.key
 *_private_key*
 
+# MCP Publisher
+mcp-publisher.exe
+.mcpregistry_*
+
 # IDE
 .vscode/
 .idea/

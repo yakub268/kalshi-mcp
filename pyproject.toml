@@ -1,6 +1,6 @@
 [project]
 name = "kalshi-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server for Kalshi prediction markets - search, analyze, and trade prediction markets through Claude Desktop"
 authors = [{name = "yakub268"}]
 readme = "README.md"
