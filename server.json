@@ -1,0 +1,58 @@
+{
+  "name": "io.github.yakub268/kalshi",
+  "version": "0.1.0",
+  "description": "MCP server for Kalshi prediction markets - search, analyze, and trade prediction markets through Claude Desktop",
+  "longDescription": "Production-grade MCP server enabling Claude Desktop to interact with Kalshi prediction markets. Features include market search, orderbook analysis, portfolio management, and order execution. Built with battle-tested authentication and rate limiting from a live trading system with 4+ months uptime.",
+  "sourceUrl": "https://github.com/yakub268/kalshi-mcp",
+  "homepage": "https://github.com/yakub268/kalshi-mcp",
+  "license": "MIT",
+  "author": "yakub268",
+  "runtime": "python",
+  "installationMethod": "pip",
+  "packageName": "kalshi-mcp",
+  "entrypoint": "kalshi_mcp:mcp",
+  "tools": [
+    {
+      "name": "search_markets",
+      "description": "Search Kalshi prediction markets by keyword with prices and volume"
+    },
+    {
+      "name": "get_market_details",
+      "description": "Get full market details including orderbook depth"
+    },
+    {
+      "name": "get_portfolio",
+      "description": "Get account balance and open positions with P&L"
+    },
+    {
+      "name": "get_trending_markets",
+      "description": "Get top trending markets by 24-hour volume"
+    },
+    {
+      "name": "place_order",
+      "description": "Execute limit orders on Kalshi markets"
+    },
+    {
+      "name": "get_series_markets",
+      "description": "Get all markets in a series (e.g., all Fed events)"
+    }
+  ],
+  "resources": [
+    {
+      "uri": "kalshi://balance",
+      "description": "Current Kalshi account balance"
+    },
+    {
+      "uri": "kalshi://positions",
+      "description": "List of open Kalshi positions"
+    }
+  ],
+  "prompts": [],
+  "categories": ["finance", "trading", "data"],
+  "tags": ["prediction-markets", "kalshi", "trading", "finance", "market-data"],
+  "keywords": ["prediction markets", "kalshi", "trading", "finance", "orderbook", "portfolio"],
+  "requirements": {
+    "apiKey": true,
+    "credentials": ["KALSHI_API_KEY", "KALSHI_PRIVATE_KEY_PATH"]
+  }
+}

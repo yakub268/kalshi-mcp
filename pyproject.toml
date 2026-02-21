@@ -4,7 +4,18 @@ version = "0.1.0"
 description = "MCP server for Kalshi prediction markets - search, analyze, and trade prediction markets through Claude Desktop"
 authors = [{name = "yakub268"}]
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.10"
+keywords = ["mcp", "kalshi", "prediction-markets", "trading", "claude-desktop"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
 dependencies = [
     "mcp>=1.2.0",
     "httpx>=0.27.0",
@@ -14,6 +25,10 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/yakub268/kalshi-mcp"
 Repository = "https://github.com/yakub268/kalshi-mcp"
+Issues = "https://github.com/yakub268/kalshi-mcp/issues"
+
+[tool.mcp]
+name = "io.github.yakub268/kalshi"
 
 [build-system]
 requires = ["hatchling"]
