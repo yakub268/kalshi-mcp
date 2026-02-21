@@ -400,9 +400,8 @@ def get_positions_resource() -> str:
 
 # ================== STARTUP ==================
 
-@mcp.on_startup()
-async def startup():
-    """Initialize API client and credentials on server startup."""
+def initialize():
+    """Initialize API client and credentials."""
     global private_key, http_client
 
     if not API_KEY:
@@ -414,4 +413,5 @@ async def startup():
 
 
 if __name__ == "__main__":
+    initialize()
     mcp.run()
