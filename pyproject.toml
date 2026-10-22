@@ -1,12 +1,12 @@
 [project]
-name = "kalshi-mcp"
-version = "0.1.1"
-description = "MCP server for Kalshi prediction markets - search, analyze, and trade prediction markets through Claude Desktop"
+name = "prediction-market-mcp"
+version = "0.2.0"
+description = "Unified MCP server for prediction markets - Kalshi, Polymarket, and Metaculus. Search, analyze, compare, and trade across all major prediction platforms through Claude Desktop."
 authors = [{name = "yakub268"}]
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
-keywords = ["mcp", "kalshi", "prediction-markets", "trading", "claude-desktop"]
+keywords = ["mcp", "kalshi", "polymarket", "metaculus", "prediction-markets", "trading", "claude-desktop", "forecasting", "arbitrage"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -28,7 +28,7 @@ Repository = "https://github.com/yakub268/kalshi-mcp"
 Issues = "https://github.com/yakub268/kalshi-mcp/issues"
 
 [tool.mcp]
-name = "io.github.yakub268/kalshi"
+name = "io.github.yakub268/prediction-markets"
 
 [build-system]
 requires = ["hatchling"]
